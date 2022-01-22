@@ -156,7 +156,6 @@ class tsa_econometrics:
     
     def future_predict(self,fut_steps):
         import numpy as np
-        
         if self.insert_dummy=="True":
             if self.maximum=="True":
                 futures=np.exp(self.modelo.predict(start=len(self.log),end=len(self.log)+fut_steps,exog=self.array[-fut_steps-1:],dynamic=False))
@@ -165,9 +164,7 @@ class tsa_econometrics:
                     futures=np.exp(self.modelo.predict(start=len(self.log),end=len(self.log)+fut_steps,exog=self.array[-fut_steps-1:],dynamic=False))
         else:
              futures=np.exp(self.modelo.predict(start=len(self.log),end=len(self.log)+fut_steps,dynamic=False))
-        
         futures.plot()
-        
         return futures
 
 import pandas as pd
