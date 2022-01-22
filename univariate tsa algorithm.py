@@ -167,28 +167,3 @@ class tsa_econometrics:
         futures.plot()
         return futures
 
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-
-path="C:/Users/HP/Documents/EJERCICIOS/Modelo Mundell-Fleming/modelo estadounidense/"
-data=pd.read_excel(path+"data.xlsx",index_col=0)
-
-data.columns=["e","G","i","M1","y"]
-data_train=data[:-20]
-objeto=tsa_econometrics(variable=data["i"],deter="ct")
-
-dickey,new_data=objeto.level_results()
-dickey
-
-objeto.selection_criteria(signif=0.05)
-
-objeto.resid_diag(2,0,2)
-
-modelo,lbox,dummy=objeto.fit_univariate(insert_dummy="True",maximum="False",minimum="True",lbox_lags=16)
-modelo.summary()
-
-objeto.plot_predictions()
-
-futuros=objeto.future_predict(15)
-futuros
