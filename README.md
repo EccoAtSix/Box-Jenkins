@@ -1,5 +1,5 @@
 # Box-Jenkins
-Time series algorithm that gives the optimal lags of an ARIMA model.
+Time series algorithm that gives the optimal order of an ARIMA model.
 
 Let's describe the object and methods in the class:
 
