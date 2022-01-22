@@ -20,6 +20,8 @@ Method 5 (fit_univariate): This will fit the model with the order determined in 
   3. minimum: if True, a dummy will be inserted based on the minimum residual that causes the no - normality problem.
   4. Note: User needs to specify -> If maximum: True, then minimum: False and viceversa. If insert_dummy: False, then all the arguments are False
 
+On the other hand, in this method, the user specifies the lbox test lags to analyse if the residuals are a random - walk type, with the null hypothesis: the residuals are distributed normally.
+
 Method 6 (plot_predictions): This plots the predictions inside the sample.
 
 Method 7 (future_predict): This plots the future predictions (out of sample). In order to do that, the user need to specify the future steps.
