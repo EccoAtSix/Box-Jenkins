@@ -25,3 +25,6 @@ On the other hand, in this method, the user specifies the lbox test lags to anal
 Method 6 (plot_predictions): This plots the predictions inside the sample.
 
 Method 7 (future_predict): This plots the future predictions (out of sample). In order to do that, the user need to specify the future steps.
+
+References:
+N. Gujarati, D. and C. Porter, D. (2008). "Basic Econometrics" (pp. 777-782). McGraw-Hill.
